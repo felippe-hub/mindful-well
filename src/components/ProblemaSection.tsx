@@ -29,20 +29,22 @@ const ProblemaSection = () => (
       </h2>
     </div>
 
-    <div className="grid md:grid-cols-3 gap-8 mb-16">
+    <div className="grid md:grid-cols-3 gap-6 mb-16 stagger-children">
       {cards.map((c) => (
         <div
           key={c.title}
-          className="bg-brand-light border border-foreground/[0.07] rounded-2xl p-8 card-hover"
+          className="glass-card rounded-2xl p-8 card-hover group"
         >
-          <c.icon className="w-10 h-10 text-brand-primary mb-5" />
-          <h3 className="font-display text-xl font-bold mb-3">{c.title}</h3>
+          <div className="w-12 h-12 rounded-xl bg-brand-primary/10 flex items-center justify-center mb-5 group-hover:bg-brand-primary/20 transition-colors duration-300">
+            <c.icon className="w-6 h-6 text-brand-primary" />
+          </div>
+          <h3 className="font-display text-xl font-bold mb-3 tracking-tight">{c.title}</h3>
           <p className="text-muted-foreground leading-relaxed">{c.desc}</p>
         </div>
       ))}
     </div>
 
-    <div className="max-w-3xl mx-auto bg-brand-light border-l-4 border-accent rounded-xl p-8">
+    <div className="max-w-3xl mx-auto glass-light rounded-2xl p-8 border-l-4 border-l-accent">
       <p className="text-foreground/80 italic leading-relaxed text-lg">
         "Imagine seu colaborador acordando exausto, com pressão alta ou glicose descontrolada... ou ainda abatido pela ansiedade, incapaz de sair de casa. Ele pediu ajuda antes de falhar? Sua empresa estava pronta para ouvi-lo?"
       </p>
