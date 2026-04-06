@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Syne"', 'sans-serif'],
+        display: ['"Manrope"', 'sans-serif'],
         body: ['"Plus Jakarta Sans"', 'sans-serif'],
         label: ['"Space Grotesk"', 'sans-serif'],
       },
