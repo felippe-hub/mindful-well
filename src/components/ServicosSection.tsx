@@ -16,15 +16,17 @@ const ServicosSection = () => (
     <div className="text-center max-w-3xl mx-auto mb-16">
       <span className="section-tag">Serviços Complementares de Acolhimento</span>
       <h2 className="section-heading mt-4">
-        Cuidado que vai além do monitoramento.
+        Cuidado que vai além<br />do monitoramento.
       </h2>
     </div>
 
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 stagger-children">
       {servicos.map((s) => (
-        <div key={s.title} className="bg-brand-light border border-foreground/[0.07] rounded-2xl p-7 card-hover">
-          <s.icon className="w-9 h-9 text-brand-primary mb-4" />
-          <h3 className="font-display text-lg font-bold mb-2">{s.title}</h3>
+        <div key={s.title} className="glass-card rounded-2xl p-7 card-hover group">
+          <div className="w-11 h-11 rounded-xl bg-brand-primary/10 flex items-center justify-center mb-4 group-hover:bg-brand-primary/20 transition-colors duration-300">
+            <s.icon className="w-5 h-5 text-brand-primary" />
+          </div>
+          <h3 className="font-display text-lg font-bold mb-2 tracking-tight">{s.title}</h3>
           <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
         </div>
       ))}
