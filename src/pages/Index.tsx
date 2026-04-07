@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ProblemaSection from "@/components/ProblemaSection";
+import IcebergSection from "@/components/IcebergSection";
 import EstatisticasSection from "@/components/EstatisticasSection";
 import ParaQuemSection from "@/components/ParaQuemSection";
 import NR1Section from "@/components/NR1Section";
@@ -18,6 +19,7 @@ const Index = () => (
     <Navbar />
     <HeroSection />
     <ProblemaSection />
+    <IcebergSection />
     <EstatisticasSection />
     <ParaQuemSection />
     <NR1Section />
