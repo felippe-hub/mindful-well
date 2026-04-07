@@ -22,15 +22,15 @@ const SolucaoSection = () => (
 
     {/* Timeline */}
     <div className="relative max-w-4xl mx-auto mb-16">
-      {/* Vertical line */}
-      <div className="hidden md:block absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-accent/40 via-brand-primary/30 to-transparent" />
+      {/* Vertical line — behind the number circles */}
+      <div className="hidden md:block absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-accent/40 via-brand-primary/30 to-transparent z-0" />
 
       <div className="space-y-6">
         {steps.map((s, i) => (
           <div key={s.num} className="flex gap-6 md:gap-10 group" style={{ animationDelay: `${i * 150}ms` }}>
             {/* Number circle */}
-            <div className="relative flex-shrink-0">
-              <div className="w-16 h-16 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center group-hover:bg-accent/20 group-hover:border-accent/40 transition-all duration-300">
+            <div className="relative z-10 flex-shrink-0">
+              <div className="w-16 h-16 rounded-2xl bg-background bg-accent/10 border border-accent/20 flex items-center justify-center group-hover:bg-accent/20 group-hover:border-accent/40 transition-all duration-300">
                 <span className="font-display text-lg font-extrabold text-accent">{s.num}</span>
               </div>
             </div>

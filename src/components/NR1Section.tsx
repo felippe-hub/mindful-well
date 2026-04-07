@@ -23,8 +23,7 @@ const cards = [
 
 const NR1Section = () => (
   <SectionWrapper id="nr1" className="bg-brand-gray relative overflow-hidden">
-    {/* Top alert stripe */}
-    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-flag-orange via-flag-yellow to-flag-orange" />
+    {/* Top alert stripe — inside the container, not full-width */}
 
     <div className="text-center max-w-3xl mx-auto mb-12">
       <div className="inline-flex items-center gap-2 bg-flag-orange/10 backdrop-blur-sm border border-flag-orange/20 text-flag-orange px-5 py-2.5 rounded-full text-sm font-semibold mb-6">
